@@ -1,5 +1,6 @@
 import "./style.scss";
 import { Component, Fragment } from "react";
+import CommonReturnLinks from "../common/CommonReturnLinks";
 
 const BREAK_ID = "break";
 const SESSION_ID = "session";
@@ -134,82 +135,85 @@ export default class Chrono extends Component {
 
     return (
       <Fragment>
-        <div id="chrono">
-          <audio
-            id={AUDIO_END}
-            src="https://docs.google.com/uc?export=download&id=11eGZHLeYjikqghM8v2fPkZkQYMzaFM08"
-          />
-          <h1>Interval Clock</h1>
-          <div className="display">
-            <p id="timer-label">{label}</p>
-            <div id="time-left">
-              {minuteCount}:{secondCount}
-            </div>
-          </div>
-
-          <div className="settings">
-            <div className="settings-item">
-              <p id="break-label">Break Length</p>
-              <div>
-                <i
-                  id="break-decrement"
-                  className="bi bi-arrow-down-circle-fill"
-                  onClick={() => this.decreaseLength(BREAK_ID)}
-                />
-                <input
-                  id="break-length"
-                  type="number"
-                  min="1"
-                  max="60"
-                  step="1"
-                  value={this.state.breakLength}
-                  onChange={(e) => this.updateLength(e, BREAK_ID)}
-                  onClick={(e) => e.target.select()}
-                />
-                <i
-                  id="break-increment"
-                  className="bi bi-arrow-up-circle-fill"
-                  onClick={() => this.increaseLength(BREAK_ID)}
-                />
-              </div>
-            </div>
-            <div className="settings-item">
-              <p id="session-label">Session Length</p>
-              <div>
-                <i
-                  id="session-decrement"
-                  className="bi bi-arrow-down-circle-fill"
-                  onClick={() => this.decreaseLength(SESSION_ID)}
-                />
-                <input
-                  id="session-length"
-                  type="number"
-                  min="1"
-                  max="60"
-                  step="1"
-                  value={this.state.sessionLength}
-                  onChange={(e) => this.updateLength(e, SESSION_ID)}
-                  onClick={(e) => e.target.select()}
-                />
-                <i
-                  id="session-increment"
-                  className="bi bi-arrow-up-circle-fill"
-                  onClick={() => this.increaseLength(SESSION_ID)}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="commands">
-            <div id="start_stop" onClick={this.startStopTimer.bind(this)}>
-              <i className="bi bi-play-circle-fill " />
-              <i className="bi bi-pause-circle-fill" />
-            </div>
-            <i
-              id="reset"
-              className="bi bi-stop-circle-fill"
-              onClick={this.resetTimer.bind(this)}
+        <div className="chrono-container">
+          <CommonReturnLinks />
+          <div id="chrono">
+            <audio
+              id={AUDIO_END}
+              src="https://docs.google.com/uc?export=download&id=11eGZHLeYjikqghM8v2fPkZkQYMzaFM08"
             />
+            <h1>Interval Clock</h1>
+            <div className="display">
+              <p id="timer-label">{label}</p>
+              <div id="time-left">
+                {minuteCount}:{secondCount}
+              </div>
+            </div>
+
+            <div className="settings">
+              <div className="settings-item">
+                <p id="break-label">Break Length</p>
+                <div>
+                  <i
+                    id="break-decrement"
+                    className="bi bi-arrow-down-circle-fill"
+                    onClick={() => this.decreaseLength(BREAK_ID)}
+                  />
+                  <input
+                    id="break-length"
+                    type="number"
+                    min="1"
+                    max="60"
+                    step="1"
+                    value={this.state.breakLength}
+                    onChange={(e) => this.updateLength(e, BREAK_ID)}
+                    onClick={(e) => e.target.select()}
+                  />
+                  <i
+                    id="break-increment"
+                    className="bi bi-arrow-up-circle-fill"
+                    onClick={() => this.increaseLength(BREAK_ID)}
+                  />
+                </div>
+              </div>
+              <div className="settings-item">
+                <p id="session-label">Session Length</p>
+                <div>
+                  <i
+                    id="session-decrement"
+                    className="bi bi-arrow-down-circle-fill"
+                    onClick={() => this.decreaseLength(SESSION_ID)}
+                  />
+                  <input
+                    id="session-length"
+                    type="number"
+                    min="1"
+                    max="60"
+                    step="1"
+                    value={this.state.sessionLength}
+                    onChange={(e) => this.updateLength(e, SESSION_ID)}
+                    onClick={(e) => e.target.select()}
+                  />
+                  <i
+                    id="session-increment"
+                    className="bi bi-arrow-up-circle-fill"
+                    onClick={() => this.increaseLength(SESSION_ID)}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="commands">
+              <div id="start_stop" onClick={this.startStopTimer.bind(this)}>
+                <i className="bi bi-play-circle-fill " />
+                <i className="bi bi-pause-circle-fill" />
+              </div>
+              <i
+                id="reset"
+                className="bi bi-stop-circle-fill"
+                onClick={this.resetTimer.bind(this)}
+              />
+            </div>
           </div>
         </div>
       </Fragment>

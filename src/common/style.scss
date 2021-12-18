@@ -1,0 +1,12 @@
+.common-return-links {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 10px;
+  .common-return-link {
+    color: white;
+  }
+}

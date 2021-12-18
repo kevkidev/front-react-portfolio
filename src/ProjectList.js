@@ -1,26 +1,27 @@
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 
 const projects = [
   {
-    route: "/time-interval",
+    route: "/projects/time-interval",
     title: "Time interval",
     imageSrc: "https://cdn-icons-png.flaticon.com/512/2972/2972316.png",
     display: true,
   },
   {
-    route: "/calculator",
+    route: "/projects/calculator",
     title: "Calculator",
     imageSrc: "https://cdn-icons-png.flaticon.com/512/2972/2972316.png",
     display: true,
   },
   {
-    route: "/chat",
+    route: "/projects/chat",
     title: "Chat",
     imageSrc: "https://cdn-icons-png.flaticon.com/512/2972/2972316.png",
     display: true,
   },
   {
-    route: "/drum-machine",
+    route: "/projects/drum-machine",
     title: "Drum Machine",
     imageSrc: "https://cdn-icons-png.flaticon.com/512/2972/2972316.png",
     display: true,
@@ -59,17 +60,15 @@ function ProjectList({ limit }) {
     count = projects.length;
   }
 
-  console.log(count);
-
   return (
     <div className="app-projects-list">
-      {projects.map((e) => {
+      {projects.map((e, i) => {
         if (count > 0) {
           count--;
           return (
             e.display && (
-              <div className="app-div-project-tile">
-                <Link to={e.route}>
+              <div key={`project-${i}`} className="app-div-project-tile">
+                <Link class="app-a" to={e.route}>
                   <img src={e.imageSrc} alt={e.title + " image"} />
                   <p>{e.title}</p>
                 </Link>
@@ -77,6 +76,7 @@ function ProjectList({ limit }) {
             )
           );
         }
+        return <Fragment></Fragment>;
       })}
     </div>
   );

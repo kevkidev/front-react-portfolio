@@ -1,0 +1,63 @@
+// html {
+//   body {
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     background-color: rgb(58, 37, 58);
+//   }
+// }
+
+// #drum-machine {
+//   margin: auto;
+//   width: fit-content;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   gap: 100px;
+//   background-color: rgb(126, 82, 126);
+//   padding: 40px;
+//   box-shadow: 0 0 100px rgb(129, 36, 129);
+// }
+// #drum-machine:focus {
+//   outline: none;
+// }
+// .pads {
+//   display: grid;
+//   grid-template-areas:
+//     "k k k"
+//     "k k k"
+//     "k k k";
+//   gap: 10px;
+// }
+
+// .drum-pad {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   font-weight: bold;
+//   font-size: 50px;
+//   color: rgb(43, 39, 43);
+//   width: 100px;
+//   height: 100px;
+//   background-color: rgb(163, 163, 11);
+//   border-radius: 8px;
+//   box-shadow: 0 0 8px rgb(37, 2, 37);
+// }
+
+// .controls {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   gap: 30px;
+// }
+
+// #display {
+//   background-color: rgb(247, 247, 129);
+//   padding: 8px;
+//   text-align: center;
+//   border-radius: 5px;
+//   width: 150px;
+//   box-shadow: 0 0 10px yellow;
+// }

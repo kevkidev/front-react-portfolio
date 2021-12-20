@@ -6,6 +6,7 @@ import { ref, set, onValue } from "firebase/database";
 import { Component } from "react";
 import ProjectList from "./ProjectList";
 
+console.log(process.env);
 class App extends Component {
   componentDidMount() {
     // add to db

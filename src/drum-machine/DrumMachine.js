@@ -1,10 +1,10 @@
 import "./style.scss";
-import { Component, Fragment } from "react";
+import { Component } from "react";
+import CommonReturnLinks from "../common/CommonReturnLinks";
 
 const Key = ({ name, audioId, clickAction }) => {
   const SERVER_URL = "https://docs.google.com/uc?export=download&id=";
   const AUDIO_SRC = SERVER_URL.concat(audioId);
-  const AUDIO_ID = "id-audio-" + audioId;
   return (
     <button
       id={"btn-" + name}
@@ -12,20 +12,10 @@ const Key = ({ name, audioId, clickAction }) => {
       onClick={() => clickAction(name)}
     >
       {name}
-      <audio id={name} src={AUDIO_SRC} className="clip"></audio>
+      <audio id={name} src={AUDIO_SRC} className="clip" />
     </button>
   );
 };
-
-function ButtonToggle({ name, action }) {
-  return (
-    <Fragment>
-      <button className="btn btn-primary">
-        <i className="bi bi-toggle-off"> {name}</i>
-      </button>
-    </Fragment>
-  );
-}
 
 const KEYS = {
   Q: { name: "Toy Souljah Snare", id: "1KamtQoVQ0wGEqcxoRKSYcJQmeRosGsbB" },
@@ -74,7 +64,11 @@ export default class DrumMachine extends Component {
 
   render() {
     return (
-      <div id="app" class="container-fluid">
+      <div
+        id="project-drum-machine"
+        className="container-fluid drum-machine-container"
+      >
+        <CommonReturnLinks />
         <div className="parent" onKeyPress={this.keyAction}>
           <div id="drum-machine" tabIndex={0}>
             <div className="pads">

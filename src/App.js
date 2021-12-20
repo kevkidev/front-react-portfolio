@@ -28,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <div class="app">
+        <div className="app">
           <nav id="app-navbar" className="app-navbar">
             <a className="app-nav-link app-a" href="#app-welcome-section">
               About
@@ -62,12 +62,12 @@ class App extends Component {
                 <h1 className="app-h1">Let's work together...</h1>
                 <h2 className="app-h2">View more and contact me on:</h2>
                 <a href="https://www.linkedin.com/in/kevkidev/">
-                  <i class="bi bi-linkedin" />
+                  <i className="bi bi-linkedin" />
                   LinkedIn
                 </a>
 
                 <a href="https://gist.github.com/kevkidev">
-                  <i class="bi bi-github" />
+                  <i className="bi bi-github" />
                   GitHub
                 </a>
               </div>

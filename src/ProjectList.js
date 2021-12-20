@@ -68,7 +68,7 @@ function ProjectList({ limit }) {
           return (
             e.display && (
               <div key={`project-${i}`} className="app-div-project-tile">
-                <Link class="app-a" to={e.route}>
+                <Link className="app-a" to={e.route}>
                   <img src={e.imageSrc} alt={e.title + " image"} />
                   <p>{e.title}</p>
                 </Link>

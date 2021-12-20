@@ -1,3 +1,4 @@
+import "./NotFoundPage.scss";
 import CommonReturnLinks from "./common/CommonReturnLinks";
 
 function NotFoundPage() {

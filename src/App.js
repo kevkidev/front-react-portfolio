@@ -50,22 +50,21 @@ class App extends Component {
             </section>
 
             <section id="app-projects-section" className="app-section">
-              <header>These are some of my projects</header>
+              <header>Here are some of my projects</header>
               <ProjectList limit={6} />
               <Link id="app-a-profile-link" to="/projects">
-                Show all ...
+                See all projects ...
               </Link>
             </section>
 
             <section id="app-contact-section" className="app-section">
               <div>
-                <h1 className="app-h1">Let's work together...</h1>
+                <h1 className="app-h1">Let's collaborate together ...</h1>
                 <h2 className="app-h2">View more and contact me on:</h2>
                 <a href="https://www.linkedin.com/in/kevkidev/">
                   <i className="bi bi-linkedin" />
                   LinkedIn
                 </a>
-
                 <a href="https://gist.github.com/kevkidev">
                   <i className="bi bi-github" />
                   GitHub

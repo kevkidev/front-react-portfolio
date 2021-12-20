@@ -1,6 +1,7 @@
 import "./style.scss";
 import { Component, Fragment } from "react";
 import CommonReturnLinks from "../common/CommonReturnLinks";
+import CommonExternalLinks from "../common/CommonExternalLinks";
 
 const BREAK_ID = "break";
 const SESSION_ID = "session";
@@ -137,6 +138,11 @@ export default class Chrono extends Component {
       <Fragment>
         <div className="chrono-container">
           <CommonReturnLinks />
+          <CommonExternalLinks
+            urls={[
+              "https://github.com/kevkidev/front-react-portfolio/tree/develop/src/drum-machine",
+            ]}
+          />
           <div id="chrono">
             <audio
               id={AUDIO_END}

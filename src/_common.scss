@@ -1,0 +1,8 @@
+$app-main-bg: rgb(48, 48, 48);
+
+@mixin app-anim-hover($animName, $duration, $function) {
+  animation-name: $animName;
+  animation-duration: $duration;
+  animation-timing-function: $function;
+  animation-fill-mode: forwards;
+}

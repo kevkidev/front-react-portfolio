@@ -1,6 +1,7 @@
 import "./Style.scss";
 import { Component } from "react";
 import CommonReturnLinks from "../common/CommonReturnLinks";
+import CommonExternalLinks from "../common/CommonExternalLinks";
 
 const KEYPAD_CLEAR = "clear";
 const KEYPAD_DIVIDE = "divide";
@@ -258,6 +259,11 @@ export default class Calculator extends Component {
     return (
       <div className="calc-container">
         <CommonReturnLinks />
+        <CommonExternalLinks
+          urls={[
+            "https://github.com/kevkidev/front-react-portfolio/tree/develop/src/calculator",
+          ]}
+        />
         <div id="calc" onKeyPress={this.handleKeyUp} tabIndex={0}>
           <div className="screen" style={{ gridArea: "display" }}>
             <div id="history" className="screen-line">

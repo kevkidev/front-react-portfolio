@@ -1,3 +1,44 @@
+@import "./_common.scss";
+
+.app-h1 {
+  font-size: 2.5em;
+}
+.app-h2 {
+  font-weight: lighter;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.app-a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.app-navbar {
+  background-color: var(--color-yellow);
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+
+  a {
+    padding: 20px;
+    text-shadow: 0px 0px 4px black;
+  }
+}
+
+.app-section:before {
+  height: var(--navbar-height);
+  content: "";
+  display: block;
+}
+.app-section {
+  text-align: center;
+  width: 100%;
+}
+
 .app {
   width: 100vw;
   height: 100vh;
@@ -8,36 +49,6 @@
   text-decoration: none;
   color: white;
   font-size: 1.15em;
-
-  .app-a:visited {
-    color: white;
-    text-decoration: none;
-  }
-
-  .app-navbar {
-    background-color: var(--color-yellow);
-    position: fixed;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 30px;
-
-    a {
-      padding: 20px;
-      text-shadow: 0px 0px 4px black;
-    }
-  }
-
-  .app-section:before {
-    height: var(--navbar-height);
-    content: "";
-    display: block;
-  }
-  .app-section {
-    text-align: center;
-    width: 100%;
-  }
 
   #app-welcome-section {
     height: 100vh;
@@ -50,15 +61,6 @@
       color: var(--color-yellow);
       font-style: italic;
     }
-  }
-
-  .app-h1 {
-    font-size: 2.5em;
-  }
-  .app-h2 {
-    font-weight: lighter;
-    font-size: 25px;
-    margin-bottom: 30px;
   }
 
   #app-projects-section {
@@ -76,97 +78,8 @@
     }
   }
 
-  .app-projects-list {
-    max-width: 60%;
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(60px, 1fr));
-    grid-template-rows: 1fr 1fr;
-  }
-
-  @media (max-width: 1200px) {
-    .app-projects-list {
-      grid-template-columns: repeat(2, minmax(60px, 1fr));
-      grid-template-rows: 1fr 1fr 1fr;
-    }
-  }
-
-  @media (max-width: 800px) {
-    .app-projects-list {
-      grid-template-columns: minmax(60px, 1fr);
-      grid-template-rows: repeat(6, fr);
-    }
-  }
-
-  @mixin anim-hover($animName, $duration, $function) {
-    animation-name: $animName;
-    animation-duration: $duration;
-    animation-timing-function: $function;
-    animation-fill-mode: forwards;
-  }
-
-  .app-div-project-tile {
-    margin: 20px;
-    img {
-      display: block;
-      background-color: whitesmoke;
-      width: 100%;
-      height: auto;
-      border-radius: 5px 5px 0 0;
-    }
-
-    .app-div-project-tile p,
-    #app-a-profile-link {
-      background-color: rgb(80, 79, 74);
-      font-size: 0.8em;
-      padding: 10px;
-      border-radius: 0 0 5px 5px;
-    }
-
-    p:hover::before {
-      content: "";
-      @include anim-hover(projectLinkHoverBefore, 300ms, ease);
-    }
-
-    p:hover::after {
-      content: "";
-      @include anim-hover(projectLinkHoverAfter, 300ms, ease);
-    }
-  }
-
-  @keyframes projectLinkHoverBefore {
-    0% {
-      content: "";
-      opacity: 0;
-    }
-    50% {
-      content: "< ";
-      opacity: 0.5;
-    }
-    100% {
-      content: "< ";
-      opacity: 1;
-      color: rgb(255, 208, 0);
-    }
-  }
-
-  @keyframes projectLinkHoverAfter {
-    0% {
-      content: "";
-      opacity: 0;
-    }
-    50% {
-      content: " />";
-      opacity: 0.5;
-    }
-    100% {
-      content: " />";
-      opacity: 1;
-      color: rgb(255, 208, 0);
-    }
-  }
-
   #app-a-profile-link {
+    background-color: rgb(80, 79, 74);
     font-size: 1em;
     padding: 10px 30px;
     border-radius: 5px;
@@ -191,18 +104,17 @@
       }
     }
 
+    @keyframes contactLinkMovetoBottom {
+      0% {
+        top: 0px;
+      }
+      100% {
+        top: 10px;
+      }
+    }
     a:hover {
       position: relative;
-      @include anim-hover(contactLinkMovetoBottom, 100ms, linear);
-    }
-  }
-
-  @keyframes contactLinkMovetoBottom {
-    0% {
-      top: 0px;
-    }
-    100% {
-      top: 10px;
+      @include app-anim-hover(contactLinkMovetoBottom, 100ms, linear);
     }
   }
 
@@ -214,21 +126,10 @@
     justify-content: center;
     align-items: center;
   }
-
-  @media (max-width: 400px) {
-    .app {
-      font-size: 1.03em;
-    }
-  }
 }
 
-.app-not-found {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(68, 30, 30);
-  color: white;
+@media (max-width: 400px) {
+  .app {
+    font-size: 1.03em;
+  }
 }

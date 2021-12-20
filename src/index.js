@@ -10,8 +10,8 @@ import Chat from "./chat/Chat";
 import Chrono from "./time-interval/Chrono";
 import Calculator from "./calculator/Calculator";
 import DrumMachine from "./drum-machine/DrumMachine";
-import ProjectList from "./ProjectList";
 import Tretris from "./tetris/Tetris";
+import ProjectListPage from "./ProjectListPage";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,7 +23,7 @@ ReactDOM.render(
         <Route path="/projects/drum-machine" element={<DrumMachine />} />
         <Route path="/projects/chat/:pseudo" element={<Chat />} />
         <Route path="/projects/tetris" element={<Tretris />} />
-        <Route path="/projects" element={<ProjectList limit={0} />} />
+        <Route path="/projects" element={<ProjectListPage />} />
         <Route path="/:login" element={<Login />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

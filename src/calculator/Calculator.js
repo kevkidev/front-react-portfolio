@@ -1,5 +1,6 @@
 import "./Style.scss";
 import { Component } from "react";
+import CommonReturnLinks from "../common/CommonReturnLinks";
 
 const KEYPAD_CLEAR = "clear";
 const KEYPAD_DIVIDE = "divide";
@@ -255,26 +256,29 @@ export default class Calculator extends Component {
 
   render() {
     return (
-      <div id="calc" onKeyPress={this.handleKeyUp} tabIndex={0}>
-        <div className="screen" style={{ gridArea: "display" }}>
-          <div id="history" className="screen-line">
-            {this.state.history.join("")}
+      <div className="calc-container">
+        <CommonReturnLinks />
+        <div id="calc" onKeyPress={this.handleKeyUp} tabIndex={0}>
+          <div className="screen" style={{ gridArea: "display" }}>
+            <div id="history" className="screen-line">
+              {this.state.history.join("")}
+            </div>
+            <div id="display" className="screen-line">
+              {this.state.result}
+            </div>
           </div>
-          <div id="display" className="screen-line">
-            {this.state.result}
-          </div>
-        </div>
 
-        {Object.keys(KEYPADS).map((key) => (
-          <div
-            key={key}
-            id={key}
-            style={{ gridArea: key }}
-            onClick={this.handleClick}
-          >
-            {KEYPADS[key]}
-          </div>
-        ))}
+          {Object.keys(KEYPADS).map((key) => (
+            <div
+              key={key}
+              id={key}
+              style={{ gridArea: key }}
+              onClick={this.handleClick}
+            >
+              {KEYPADS[key]}
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

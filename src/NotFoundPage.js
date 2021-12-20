@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
-import { Fragment } from "react/cjs/react.production.min";
+import CommonReturnLinks from "./common/CommonReturnLinks";
 
 function NotFoundPage() {
   return (
-    <Fragment>
-      <h1>Oups! your are lost ?</h1>
-      <Link to="/">Return</Link>
-    </Fragment>
+    <div class="app-not-found">
+      <h1>Oups! There is nothing to see here :/</h1>
+      <CommonReturnLinks />
+    </div>
   );
 }
 export default NotFoundPage;

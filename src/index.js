@@ -1,8 +1,11 @@
+// TODO passer utiliser des const pour le path des routes
+
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { PATH_MARKDOWN_EDITOR } from "./common/routes";
 
 // Lazy imports
 const NotFoundPage = lazy(() => import("./NotFoundPage"));
@@ -11,8 +14,9 @@ const Chat = lazy(() => import("./chat/Chat"));
 const Chrono = lazy(() => import("./time-interval/Chrono"));
 const Calculator = lazy(() => import("./calculator/Calculator"));
 const DrumMachine = lazy(() => import("./drum-machine/DrumMachine"));
-const GameBlocks = lazy(() => import("./tetris/GameBlocks"));
+const GameBlocks = lazy(() => import("./game-blocks/GameBlocks"));
 const ProjectListPage = lazy(() => import("./ProjectListPage"));
+const MarkdownEditor = lazy(() => import("./markdown-editor/MarkdownEditor"));
 const App = lazy(() => import("./App"));
 
 ReactDOM.render(
@@ -25,7 +29,8 @@ ReactDOM.render(
           <Route path="/projects/calculator" element={<Calculator />} />
           <Route path="/projects/drum-machine" element={<DrumMachine />} />
           <Route path="/projects/chat" element={<Chat />} />
-          <Route path="/projects/tetris" element={<GameBlocks />} />
+          <Route path="/projects/game-blocks" element={<GameBlocks />} />
+          <Route path={PATH_MARKDOWN_EDITOR} element={<MarkdownEditor />} />
           <Route path="/projects" element={<ProjectListPage />} />
           <Route path="/login/:login" element={<Login />} />
           <Route path="/*/*" element={<NotFoundPage />} />

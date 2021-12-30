@@ -1,4 +1,4 @@
-.tetris {
+.gameblocks {
   $blockSize: 20px; // if you change it change the JS too
   background-color: black;
   color: white;
@@ -7,97 +7,97 @@
   padding: 30px;
   display: flex;
   justify-content: center;
-  .tetris-box {
+  .gameblocks-box {
     background-color: rgb(54, 54, 54);
     width: $blockSize * 10;
     height: $blockSize * 20;
     border: 2px solid yellow;
-    .tetris-item {
+    .gameblocks-item {
       position: relative;
       width: fit-content;
       height: fit-content;
       display: grid;
-      .tetris-item-block {
+      .gameblocks-item-block {
         width: $blockSize;
         height: $blockSize;
         background-color: yellowgreen;
         border: 1px solid black; // if you change it change the JS too
         border-bottom-width: 0;
       }
-      .tetris-item-block-a {
+      .gameblocks-item-block-a {
         grid-area: a;
       }
-      .tetris-item-block-b {
+      .gameblocks-item-block-b {
         grid-area: b;
       }
-      .tetris-item-block-c {
+      .gameblocks-item-block-c {
         grid-area: c;
       }
-      .tetris-item-block-d {
+      .gameblocks-item-block-d {
         grid-area: d;
       }
     }
-    .tetris-item-right-l {
+    .gameblocks-item-right-l {
       grid-template-areas:
         "a ."
         "b ."
         "c d";
-      .tetris-item-block-c {
+      .gameblocks-item-block-c {
         border-left-width: 0;
         border-bottom-width: 0;
       }
-      .tetris-item-block-d {
+      .gameblocks-item-block-d {
         border-bottom-width: 0;
       }
     }
-    .tetris-item-left-l {
+    .gameblocks-item-left-l {
       grid-template-areas:
         ". a"
         ". b"
         "d c";
-      .tetris-item-block-c {
+      .gameblocks-item-block-c {
         border-left-width: 0;
         border-bottom-width: 0;
       }
-      .tetris-item-block-d {
+      .gameblocks-item-block-d {
         border-bottom-width: 0;
       }
     }
-    .tetris-item-up-t {
+    .gameblocks-item-up-t {
       grid-template-areas:
         ". a ."
         "b c d";
     }
-    .tetris-item-right-t {
+    .gameblocks-item-right-t {
       grid-template-areas:
         "a ."
         "b c"
         "d .";
     }
-    .tetris-item-down-t {
+    .gameblocks-item-down-t {
       grid-template-areas:
         "a b c"
         ". d .";
     }
-    .tetris-item-left-t {
+    .gameblocks-item-left-t {
       grid-template-areas:
         ". a"
         "c b"
         ". d";
     }
-    .tetris-item-cube {
+    .gameblocks-item-cube {
       grid-template-areas:
         "a b"
         "c d";
     }
-    .tetris-item-vertical-bar {
+    .gameblocks-item-vertical-bar {
       grid-template-areas:
         "a"
         "b"
         "c"
         "d";
     }
-    .tetris-item-horizontal-bar {
+    .gameblocks-item-horizontal-bar {
       grid-template-areas: "a b c d";
     }
   }

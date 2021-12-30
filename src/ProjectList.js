@@ -1,6 +1,7 @@
 import "./ProjectList.scss";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
+import { PATH_MARKDOWN_EDITOR } from "./common/routes";
 
 const SERVER_PREFIX = "https://docs.google.com/uc?export=download&id=";
 //img template https://cdn-icons-png.flaticon.com/512/2972/2972316.png
@@ -24,10 +25,11 @@ const projects = [
     display: true,
   },
   {
-    route: "https://codepen.io/kevkidev/full/QWqEbrL",
+    // route: "https://codepen.io/kevkidev/full/QWqEbrL",
+    route: PATH_MARKDOWN_EDITOR,
     title: "React Markdown Editor",
     imageSrc: "1cXgz4rGSPyS3nUixfO_gh5h6d5UxQivS",
-    external: true,
+    // external: true,
     display: true,
   },
   {

@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import { Fragment } from "react/cjs/react.production.min";
 import "./App.scss";
-import database from "./services/firebase";
-import { ref, set, onValue } from "firebase/database";
-import { Component } from "react";
-import ProjectList from "./ProjectList";
+import { Component, lazy, Suspense } from "react";
+
+const ProjectList = lazy(() => import("./ProjectList"));
 
 console.log(process.env);
 class App extends Component {
@@ -52,7 +51,9 @@ class App extends Component {
 
             <section id="app-projects-section" className="app-section">
               <header>Here are some of my projects</header>
-              <ProjectList limit={6} />
+              <Suspense fallback={<div>Loading projects...</div>}>
+                <ProjectList limit={6} />
+              </Suspense>
               <Link id="app-a-profile-link" to="/projects">
                 See all projects ...
               </Link>

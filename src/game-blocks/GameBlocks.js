@@ -3,7 +3,7 @@ import "./style.scss";
 
 const ITEM_SIZE = 20;
 const ITEMS = [
-  { type: "cude", width: 2 * ITEM_SIZE, height: 2 * ITEM_SIZE },
+  { type: "cube", width: 2 * ITEM_SIZE, height: 2 * ITEM_SIZE },
   { type: "left-l", width: 2 * ITEM_SIZE, height: 3 * ITEM_SIZE },
   { type: "right-l", width: 2 * ITEM_SIZE, height: 3 * ITEM_SIZE },
   { type: "vertical-bar", width: 1 * ITEM_SIZE, height: 4 * ITEM_SIZE },
@@ -14,23 +14,24 @@ const ITEMS = [
   { type: "down-t", width: 3 * ITEM_SIZE, height: 2 * ITEM_SIZE },
 ];
 
-function TetrisItem({ item, top }) {
+function GameBlocksItem({ item, top }) {
   const calcTop = top - item.height - 2;
   console.log(calcTop);
   return (
     <div
-      className={`tetris-item tetris-item-${item.type}`}
+      className={`gameblocks-item gameblocks-item-${item.type}`}
       style={{ top: calcTop }}
     >
-      <div className="tetris-item-block tetris-item-block-a"></div>
-      <div className="tetris-item-block tetris-item-block-b"></div>
-      <div className="tetris-item-block tetris-item-block-c"></div>
-      <div className="tetris-item-block tetris-item-block-d"></div>
+      <div className="gameblocks-item-block gameblocks-item-block-a"></div>
+      <div className="gameblocks-item-block gameblocks-item-block-b"></div>
+      <div className="gameblocks-item-block gameblocks-item-block-c"></div>
+      <div className="gameblocks-item-block gameblocks-item-block-d"></div>
     </div>
   );
 }
 
-export default class Tretris extends Component {
+export default class GameBlocks extends Component {
+  // GB
   state = {
     currentItemTypeIndex: 0,
     currentItemTop: 0,
@@ -65,10 +66,10 @@ export default class Tretris extends Component {
 
   render() {
     return (
-      <div className="tetris">
-        <div className="tetris-box">
-          <TetrisItem
-            id="tetris-current-item"
+      <div className="gameblocks">
+        <div className="gameblocks-box">
+          <GameBlocksItem
+            id="gameblocks-current-item"
             item={ITEMS[this.state.currentItemTypeIndex]}
             // item="left-l"
             // top={0}

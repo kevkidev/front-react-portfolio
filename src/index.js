@@ -1,32 +1,36 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NotFoundPage from "./NotFoundPage";
-import Login from "./Login";
-import Chat from "./chat/Chat";
-import Chrono from "./time-interval/Chrono";
-import Calculator from "./calculator/Calculator";
-import DrumMachine from "./drum-machine/DrumMachine";
-import Tretris from "./tetris/Tetris";
-import ProjectListPage from "./ProjectListPage";
+
+// Lazy imports
+const NotFoundPage = lazy(() => import("./NotFoundPage"));
+const Login = lazy(() => import("./Login"));
+const Chat = lazy(() => import("./chat/Chat"));
+const Chrono = lazy(() => import("./time-interval/Chrono"));
+const Calculator = lazy(() => import("./calculator/Calculator"));
+const DrumMachine = lazy(() => import("./drum-machine/DrumMachine"));
+const GameBlocks = lazy(() => import("./tetris/GameBlocks"));
+const ProjectListPage = lazy(() => import("./ProjectListPage"));
+const App = lazy(() => import("./App"));
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route exact path="/" element={<App />} />
-        <Route path="/projects/time-interval" element={<Chrono />} />
-        <Route path="/projects/calculator" element={<Calculator />} />
-        <Route path="/projects/drum-machine" element={<DrumMachine />} />
-        <Route path="/projects/chat/:pseudo" element={<Chat />} />
-        <Route path="/projects/tetris" element={<Tretris />} />
-        <Route path="/projects" element={<ProjectListPage />} />
-        <Route path="/:login" element={<Login />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <Suspense fallback={<div>Loading ...</div>}>
+        <Routes>
+          <Route exact path="/" element={<App />} />
+          <Route path="/projects/time-interval" element={<Chrono />} />
+          <Route path="/projects/calculator" element={<Calculator />} />
+          <Route path="/projects/drum-machine" element={<DrumMachine />} />
+          <Route path="/projects/chat" element={<Chat />} />
+          <Route path="/projects/tetris" element={<GameBlocks />} />
+          <Route path="/projects" element={<ProjectListPage />} />
+          <Route path="/login/:login" element={<Login />} />
+          <Route path="/*/*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

@@ -1,65 +1,57 @@
 @import "./_common.scss";
 
 .app-projects-list {
-  max-width: 60%;
-  margin: 50px auto;
+  max-width: 70%;
+  margin: 40px auto;
   display: grid;
   grid-template-columns: repeat(3, minmax(60px, 1fr));
   grid-template-rows: 1fr 1fr;
-
   .app-div-project-tile {
-    margin: 20px;
+    background-color: $app-color-purple;
+    margin: 30px;
+    border: 10px solid $app-color-purple;
+    box-shadow: 0px 0px 20px $app-color-green;
+    border-radius: 10px;
     img {
       display: block;
-      background-color: whitesmoke;
       width: 100%;
       height: auto;
     }
 
-    .app-div-project-tile p k {
-      background-color: rgb(80, 79, 74);
-      font-size: 0.8em;
+    p {
+      background-color: $app-color-purple;
+      color: $app-color-white;
+      font-size: 1.1em;
       padding: 10px;
+      width: inherit;
+      margin: 0;
     }
 
-    @keyframes projectLinkHoverBefore {
-      0% {
-        content: "";
-        opacity: 0;
+    .project-item {
+      text-decoration: none;
+      .title {
+        font-style: italic;
+        font-weight: bold;
       }
-      50% {
-        content: "< ";
-        opacity: 0.5;
-      }
-      100% {
-        content: "< ";
-        opacity: 1;
-        color: rgb(255, 208, 0);
-      }
-    }
-
-    @keyframes projectLinkHoverAfter {
-      0% {
-        content: "";
-        opacity: 0;
-      }
-      50% {
-        content: " />";
-        opacity: 0.5;
-      }
-      100% {
-        content: " />";
-        opacity: 1;
-        color: rgb(255, 208, 0);
+      .description {
+        height: 150px;
+        font-size: 1em;
+        color: $app-color-white;
+        background-color: $app-color-purple;
+        text-align: justify;
       }
     }
 
-    p:hover::before {
+    project-item:visited {
+      text-decoration: none;
+    }
+
+    .title:hover::before {
       content: "";
       @include app-anim-hover(projectLinkHoverBefore, 300ms, ease);
     }
 
-    p:hover::after {
+    .title:hover::after {
       content: "";
       @include app-anim-hover(projectLinkHoverAfter, 300ms, ease);
     }

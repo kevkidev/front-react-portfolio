@@ -11,18 +11,22 @@ const projects = [
     title: "React Chat",
     imageSrc: "1e2xAiQ8sKCTXESOSljFzlkuzXCNNSO3I",
     display: true,
+    description: "",
   },
   {
     route: "/projects/time-interval",
     title: "React Time interval",
     imageSrc: "1BRg-N_JiohYiIGBbtRe49iRHOGyURBnw",
     display: true,
+    description: "...",
   },
   {
     route: "/projects/calculator",
     title: "React Calculator",
     imageSrc: "1mJnbMyqob5qZBaTTaSo7610fQoogI6rv",
     display: true,
+    description:
+      "Effectuer des calculs de base. Afficher le calcul en courant. Afficher l'historique du dernier résultat. Mots clés : regex, state, redux, context",
   },
   {
     // route: "https://codepen.io/kevkidev/full/QWqEbrL",
@@ -31,12 +35,14 @@ const projects = [
     imageSrc: "1cXgz4rGSPyS3nUixfO_gh5h6d5UxQivS",
     // external: true,
     display: true,
+    description: "...",
   },
   {
     route: "/projects/drum-machine",
     title: "React Drum Machine",
     imageSrc: "1e2xAiQ8sKCTXESOSljFzlkuzXCNNSO3I",
     display: true,
+    description: "...",
   },
   {
     route: "https://codepen.io/kevkidev/full/BawKJOV",
@@ -44,6 +50,7 @@ const projects = [
     imageSrc: "1GqcTVVHfTElOm0MVvDt2srZ-36G_KdDR",
     external: true,
     display: true,
+    description: " ",
   },
   {
     route: "https://codepen.io/kevkidev/full/dyzLYOb",
@@ -51,6 +58,7 @@ const projects = [
     imageSrc: "1ryYnR9OioELvxoCqmEjeHNQit4OqCH8z",
     external: true,
     display: true,
+    description: "",
   },
   {
     route: "https://codepen.io/kevkidev/full/WNEWMmx",
@@ -58,6 +66,7 @@ const projects = [
     imageSrc: "1nDvI-Fcu89sdPEFx1mbjlS63J0duKFoj",
     external: true,
     display: true,
+    description: "",
   },
   {
     route: "https://codepen.io/kevkidev/full/PoKgOQb",
@@ -65,6 +74,7 @@ const projects = [
     imageSrc: "1SXyXydIvTG4OIM8lJlX-Xj3gizGLB5KZ",
     external: true,
     display: true,
+    description: "",
   },
 
   {
@@ -73,6 +83,7 @@ const projects = [
     imageSrc: "1V-fA6ML6GkuHDSuEf31uv-vPhWx4n1wq",
     external: true,
     display: true,
+    description: "...",
   },
 ];
 
@@ -84,6 +95,14 @@ function ProjectList({ limit }) {
     count = projects.length;
   }
 
+  const TileContent = ({ e }) => (
+    <Fragment>
+      <img src={SERVER_PREFIX + e.imageSrc} alt={e.title + " image"} />
+      <p className="title">{e.title}</p>
+      <p className="description">{e.description}</p>
+    </Fragment>
+  );
+
   return (
     <div className="app-projects-list">
       {projects.map((e, i) => {
@@ -94,7 +113,7 @@ function ProjectList({ limit }) {
               <div key={`project-${i}`} className="app-div-project-tile">
                 {e.external && (
                   <a
-                    className="app-a"
+                    className="project-item"
                     href={e.route}
                     target="__blank"
                     onClick={() =>
@@ -103,27 +122,19 @@ function ProjectList({ limit }) {
                       )
                     }
                   >
-                    <img
-                      src={SERVER_PREFIX + e.imageSrc}
-                      alt={e.title + " image"}
-                    />
-                    <p>{e.title}</p>
+                    <TileContent e={e} />
                   </a>
                 )}
                 {!e.external && (
-                  <Link className="app-a" to={e.route}>
-                    <img
-                      src={SERVER_PREFIX + e.imageSrc}
-                      alt={e.title + " image"}
-                    />
-                    <p>{e.title}</p>
+                  <Link className="project-item" to={e.route}>
+                    <TileContent e={e} />
                   </Link>
                 )}
               </div>
             )
           );
         }
-        return <Fragment></Fragment>;
+        return <Fragment key={`project-${i}`}></Fragment>;
       })}
     </div>
   );

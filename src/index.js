@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { PATH_MARKDOWN_EDITOR, PATH_ROOT } from "./common/routes";
+import * as routes from "./common/routes";
 
 // Lazy imports
 const NotFoundPage = lazy(() => import("./NotFoundPage"));
@@ -24,14 +24,29 @@ ReactDOM.render(
     <BrowserRouter>
       <Suspense fallback={<div>Loading ...</div>}>
         <Routes>
-          <Route exact path={PATH_ROOT} element={<App />} />
-          <Route path="/projects/time-interval" element={<Chrono />} />
-          <Route path="/projects/calculator" element={<Calculator />} />
-          <Route path="/projects/drum-machine" element={<DrumMachine />} />
-          <Route path="/projects/chat" element={<Chat />} />
-          <Route path="/projects/game-blocks" element={<GameBlocks />} />
-          <Route path={PATH_MARKDOWN_EDITOR} element={<MarkdownEditor />} />
-          <Route path="/projects" element={<ProjectListPage />} />
+          <Route exact path={routes.PATH_ROOT} element={<App />} />
+          <Route path={routes.PATH_PROJECTS} element={<ProjectListPage />} />
+          <Route
+            path={routes.PATH_PROJECTS_TIME_INTERVAL}
+            element={<Chrono />}
+          />
+          <Route
+            path={routes.PATH_PROJECTS_CALCULATOR}
+            element={<Calculator />}
+          />
+          <Route
+            path={routes.PATH_PROJECTS_DRUM_MACHINE}
+            element={<DrumMachine />}
+          />
+          <Route path={routes.PATH_PROJECTS_CHAT} element={<Chat />} />
+          <Route
+            path={routes.PATH_PROJECTS_GAME_BLOCKS}
+            element={<GameBlocks />}
+          />
+          <Route
+            path={routes.PATH_MARKDOWN_EDITOR}
+            element={<MarkdownEditor />}
+          />
           <Route path="/login/:login" element={<Login />} />
           <Route path="/*/*" element={<NotFoundPage />} />
         </Routes>

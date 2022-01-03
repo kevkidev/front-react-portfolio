@@ -1,4 +1,4 @@
-import "./Style.scss";
+import "./MarkdownEditor.scss";
 import BoxContentEditor from "./BoxContentEditor";
 import BoxHeader from "./BoxHeader";
 import CommonReturnLinks from "../common/CommonReturnLinks";

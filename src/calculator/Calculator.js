@@ -1,4 +1,4 @@
-import "./Style.scss";
+import "./Calculator.scss";
 import { Component } from "react";
 import CommonReturnLinks from "../common/CommonReturnLinks";
 import CommonExternalLinks from "../common/CommonExternalLinks";

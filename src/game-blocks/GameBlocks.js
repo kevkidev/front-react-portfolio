@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./style.scss";
+import "./GameBlocks.scss";
 
 const ITEM_SIZE = 20;
 const ITEMS = [

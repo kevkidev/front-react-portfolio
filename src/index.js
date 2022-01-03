@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { PATH_MARKDOWN_EDITOR } from "./common/routes";
+import { PATH_MARKDOWN_EDITOR, PATH_ROOT } from "./common/routes";
 
 // Lazy imports
 const NotFoundPage = lazy(() => import("./NotFoundPage"));
@@ -24,7 +24,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Suspense fallback={<div>Loading ...</div>}>
         <Routes>
-          <Route exact path="/" element={<App />} />
+          <Route exact path={PATH_ROOT} element={<App />} />
           <Route path="/projects/time-interval" element={<Chrono />} />
           <Route path="/projects/calculator" element={<Calculator />} />
           <Route path="/projects/drum-machine" element={<DrumMachine />} />

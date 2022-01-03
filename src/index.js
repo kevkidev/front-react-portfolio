@@ -8,16 +8,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import * as routes from "./common/routes";
 
 // Lazy imports
-const NotFoundPage = lazy(() => import("./NotFoundPage"));
-const Login = lazy(() => import("./Login"));
+const App = lazy(() => import("./app/App"));
+const NotFoundPage = lazy(() => import("./app/NotFoundPage"));
+const ProjectListPage = lazy(() => import("./app/ProjectListPage"));
+const Login = lazy(() => import("./app/Login"));
 const Chat = lazy(() => import("./chat/Chat"));
 const Chrono = lazy(() => import("./time-interval/Chrono"));
 const Calculator = lazy(() => import("./calculator/Calculator"));
 const DrumMachine = lazy(() => import("./drum-machine/DrumMachine"));
 const GameBlocks = lazy(() => import("./game-blocks/GameBlocks"));
-const ProjectListPage = lazy(() => import("./ProjectListPage"));
 const MarkdownEditor = lazy(() => import("./markdown-editor/MarkdownEditor"));
-const App = lazy(() => import("./App"));
 
 ReactDOM.render(
   <React.StrictMode>

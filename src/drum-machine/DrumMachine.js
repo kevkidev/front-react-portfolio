@@ -4,8 +4,7 @@ import CommonReturnLinks from "../common/CommonReturnLinks";
 import CommonExternalLinks from "../common/CommonExternalLinks";
 
 const Key = ({ name, audioId, clickAction }) => {
-  const SERVER_URL = "https://docs.google.com/uc?export=download&id=";
-  const AUDIO_SRC = SERVER_URL.concat(audioId);
+  const AUDIO_SRC = process.env.REACT_APP_SERVER_PREFIX.concat(audioId);
   return (
     <button
       id={"btn-" + name}
@@ -70,11 +69,7 @@ export default class DrumMachine extends Component {
         className="container-fluid drum-machine-container"
       >
         <CommonReturnLinks />
-        <CommonExternalLinks
-          urls={[
-            "https://github.com/kevkidev/front-react-portfolio/tree/develop/src/drum-machine",
-          ]}
-        />
+        <CommonExternalLinks urls={[process.env.REACT_APP_URL_GITHUB_DRUM]} />
         <div className="parent" onKeyPress={this.keyAction}>
           <div id="drum-machine" tabIndex={0}>
             <div className="pads">

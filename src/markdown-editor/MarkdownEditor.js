@@ -46,9 +46,7 @@ export default class MarkdownEditor extends Component {
       <Fragment>
         <CommonReturnLinks />
         <CommonExternalLinks
-          urls={[
-            "https://github.com/kevkidev/front-react-portfolio/tree/develop/src/drum-machine",
-          ]}
+          urls={[process.env.REACT_APP_URL_GITHUB_MARKDOWN]}
         />
         <div className="md-editor-container">
           <section id="section-editor" className={editClass}>

@@ -77,6 +77,22 @@
       font-style: italic;
       font-size: 1.5em;
     }
+    .presentation {
+      margin-top: 5vh;
+      max-width: 50vw;
+      text-align: justify;
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $app-color-green;
+      }
+      a:hover {
+        text-shadow: 0 0 5px $app-color-green;
+      }
+      em {
+        font-weight: bold;
+      }
+    }
   }
 
   #app-projects-section {

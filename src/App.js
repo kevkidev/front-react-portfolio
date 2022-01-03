@@ -5,7 +5,6 @@ import { Component, lazy, Suspense } from "react";
 
 const ProjectList = lazy(() => import("./ProjectList"));
 
-console.log(process.env);
 class App extends Component {
   componentDidMount() {
     // add to db
@@ -39,13 +38,16 @@ class App extends Component {
             <a className="app-nav-link app-a" href="#app-contact-section">
               Contact
             </a>
+            <a className="app-nav-link app-a" href="#app-footer">
+              Source
+            </a>
           </nav>
 
           <main>
             <section id="app-welcome-section" className="app-section">
               <div>
-                <h1 className="app-h1">Kevin M. aka KevKiDev</h1>
-                <p>a React Frontend Developer</p>
+                <h1 className="app-h1 title">ReactFrontendDeveloper</h1>
+                <p className="sub-title">by Kevin M. aka KevKiDev</p>
               </div>
             </section>
 
@@ -54,29 +56,34 @@ class App extends Component {
               <Suspense fallback={<div>Loading projects...</div>}>
                 <ProjectList limit={6} />
               </Suspense>
-              <Link id="app-a-profile-link" to="/projects">
-                See all projects ...
-              </Link>
+              <Link to="/projects">More projects</Link>
+              &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+              <a href="#app-contact-section">
+                More about me <i className="bi bi-arrow-down"></i>
+              </a>
             </section>
 
             <section id="app-contact-section" className="app-section">
               <div>
-                <h1 className="app-h1">Let's collaborate together ...</h1>
-                <h2 className="app-h2">View more and contact me on:</h2>
-                <a href="https://www.linkedin.com/in/kevkidev/">
-                  <i className="bi bi-linkedin" />
-                  LinkedIn
-                </a>
+                <h1 className="app-h1">Let's collaborate together</h1>
+                <h2 className="app-h2">See more and contact me on</h2>
                 <a href="https://gist.github.com/kevkidev">
                   <i className="bi bi-github" />
-                  GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/kevkidev/">
+                  <i className="bi bi-linkedin" />
                 </a>
               </div>
             </section>
           </main>
-          <footer className="app-footer">
-            {/* **This is just a fake portfolio. All the projects and contact details
-          given are not real. */}
+          <footer id="app-footer" className="app-footer">
+            <span>&copy;2022 powered by Kevkidev</span>
+            <a
+              href="https://github.com/kevkidev/front-react-portfolio"
+              className="app-a"
+            >
+              See full source code on <i className="bi bi-github" />
+            </a>
           </footer>
         </div>
       </Fragment>

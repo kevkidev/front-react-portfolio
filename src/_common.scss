@@ -1,8 +1,45 @@
-$app-main-bg: rgb(48, 48, 48);
-
 @mixin app-anim-hover($animName, $duration, $function) {
   animation-name: $animName;
   animation-duration: $duration;
   animation-timing-function: $function;
   animation-fill-mode: forwards;
+}
+
+// App colors
+$app-color-purple: #463b8c;
+$app-color-purple-light: #8e80bf;
+$app-color-green: #849924;
+$app-color-white: #f2f2f2;
+$app-color-black: #1a1a1a;
+
+@keyframes projectLinkHoverBefore {
+  0% {
+    content: "";
+    opacity: 0;
+  }
+  50% {
+    content: "< ";
+    opacity: 0.5;
+  }
+  100% {
+    content: "< ";
+    opacity: 1;
+    color: $app-color-green;
+  }
+}
+
+@keyframes projectLinkHoverAfter {
+  0% {
+    content: "";
+    opacity: 0;
+  }
+  50% {
+    content: " />";
+    opacity: 0.5;
+  }
+  100% {
+    content: " />";
+    opacity: 1;
+    color: $app-color-green;
+  }
 }

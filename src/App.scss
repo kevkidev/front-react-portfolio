@@ -1,73 +1,95 @@
 @import "./_common.scss";
 
-.app-h1 {
-  font-size: 2.5em;
-}
-.app-h2 {
-  font-weight: lighter;
-  font-size: 25px;
-  margin-bottom: 30px;
-}
-
-.app-a:visited {
-  color: white;
-  text-decoration: none;
-}
-
-.app-navbar {
-  background-color: var(--color-yellow);
-  position: fixed;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  gap: 30px;
-
-  a {
-    padding: 20px;
-    text-shadow: 0px 0px 4px black;
-  }
-}
-
-.app-section:before {
-  height: var(--navbar-height);
-  content: "";
-  display: block;
-}
-.app-section {
-  text-align: center;
-  width: 100%;
-}
-
 .app {
-  width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
-  --color-yellow: rgb(226, 189, 109);
   --navbar-height: 75px;
   text-decoration: none;
-  color: white;
+  color: $app-color-white;
   font-size: 1.15em;
 
+  .title::before {
+    content: "<";
+    color: $app-color-green;
+  }
+  .title::after {
+    content: "/>";
+    color: $app-color-green;
+  }
+  .app-h1 {
+    font-size: 2.5em;
+  }
+  .app-h2 {
+    font-weight: bolder;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .app-a,
+  .app-a:visited {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .app-navbar {
+    background-color: $app-color-black;
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    border-bottom: 5px solid $app-color-green;
+    a {
+      text-shadow: 0px 0px 4px $app-color-purple;
+      padding: 20px;
+    }
+    a::before {
+      content: "< ";
+      color: $app-color-green;
+    }
+    a::after {
+      content: " />";
+      color: $app-color-green;
+    }
+  }
+
+  .app-section:before {
+    height: var(--navbar-height);
+    content: "";
+    display: block;
+  }
+  .app-section {
+    text-align: center;
+    min-height: 100vh;
+  }
+
   #app-welcome-section {
-    height: 100vh;
-    background-color: rgb(48, 48, 48);
+    background-color: $app-color-purple;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    p {
-      color: var(--color-yellow);
+    text-shadow: 0px 5px 5px $app-color-black;
+    .sub-title {
+      color: $app-color-white;
       font-style: italic;
+      font-size: 1.5em;
     }
   }
 
   #app-projects-section {
-    background-color: rgb(94, 110, 138);
+    background-color: $app-color-black;
     padding-bottom: 50px;
 
+    a {
+      color: $app-color-white;
+      text-decoration: none;
+      font-weight: bold;
+    }
     header {
+      color: $app-color-white;
       font-size: 1.8em;
       font-weight: bold;
       text-decoration-line: underline;
@@ -79,26 +101,31 @@
   }
 
   #app-a-profile-link {
-    background-color: rgb(80, 79, 74);
+    background-color: $app-color-green;
+    color: $app-color-white;
     font-size: 1em;
     padding: 10px 30px;
     border-radius: 5px;
+    text-decoration: none;
+    text-shadow: 0 0 10px $app-color-black;
+    font-weight: bold;
   }
   #app-a-profile-link:hover {
-    background-color: rgb(207, 154, 39);
+    box-shadow: 0 0 5px $app-color-white;
   }
 
   #app-contact-section {
-    background-color: rgb(80, 79, 74);
+    background-color: $app-color-purple;
+    color: $app-color-white;
+    text-shadow: 0px 5px 5px $app-color-black;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 200px 0;
-    width: 100%;
-
     a {
+      font-size: 4em;
       text-shadow: 2px 2px 2px black;
       i {
+        color: $app-color-green;
         margin-left: 20px;
         margin-right: 10px;
       }
@@ -109,7 +136,7 @@
         top: 0px;
       }
       100% {
-        top: 10px;
+        top: -5px;
       }
     }
     a:hover {
@@ -117,13 +144,14 @@
       @include app-anim-hover(contactLinkMovetoBottom, 100ms, linear);
     }
   }
-
+  a:hover {
+    text-shadow: 0 0 5px white;
+  }
   .app-footer {
-    background-color: rgb(80, 79, 74);
+    background-color: $app-color-black;
     padding: 30px;
-    border-top: solid 3px rgb(207, 154, 39);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
   }
 }

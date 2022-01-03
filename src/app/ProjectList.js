@@ -3,8 +3,6 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { PATH_MARKDOWN_EDITOR } from "../common/routes";
 
-const SERVER_PREFIX = "https://docs.google.com/uc?export=download&id=";
-//img template https://cdn-icons-png.flaticon.com/512/2972/2972316.png
 const projects = [
   {
     route: "/projects/chat",
@@ -29,11 +27,10 @@ const projects = [
       "Effectuer des calculs de base. Afficher le calcul en courant. Afficher l'historique du dernier résultat. Mots clés : regex, state, redux, context",
   },
   {
-    // route: "https://codepen.io/kevkidev/full/QWqEbrL",
     route: PATH_MARKDOWN_EDITOR,
     title: "React Markdown Editor",
     imageSrc: "1cXgz4rGSPyS3nUixfO_gh5h6d5UxQivS",
-    // external: true,
+    external: false,
     display: true,
     description: "...",
   },
@@ -45,7 +42,7 @@ const projects = [
     description: "...",
   },
   {
-    route: "https://codepen.io/kevkidev/full/BawKJOV",
+    route: process.env.REACT_APP_URL_CODEPEN_QUOTE_MACHINE,
     title: "React Random Quote Machine",
     imageSrc: "1GqcTVVHfTElOm0MVvDt2srZ-36G_KdDR",
     external: true,
@@ -53,7 +50,7 @@ const projects = [
     description: " ",
   },
   {
-    route: "https://codepen.io/kevkidev/full/dyzLYOb",
+    route: process.env.REACT_APP_URL_CODEPEN_SURVEY_FORM,
     title: "Responsive Survey Form",
     imageSrc: "1ryYnR9OioELvxoCqmEjeHNQit4OqCH8z",
     external: true,
@@ -61,7 +58,7 @@ const projects = [
     description: "",
   },
   {
-    route: "https://codepen.io/kevkidev/full/WNEWMmx",
+    route: process.env.REACT_APP_URL_CODEPEN_DOC,
     title: "Responsive Technical doc template",
     imageSrc: "1nDvI-Fcu89sdPEFx1mbjlS63J0duKFoj",
     external: true,
@@ -69,7 +66,7 @@ const projects = [
     description: "",
   },
   {
-    route: "https://codepen.io/kevkidev/full/PoKgOQb",
+    route: process.env.REACT_APP_URL_CODEPEN_LANDING,
     title: "Responsive Product Landing Page",
     imageSrc: "1SXyXydIvTG4OIM8lJlX-Xj3gizGLB5KZ",
     external: true,
@@ -78,7 +75,7 @@ const projects = [
   },
 
   {
-    route: "https://codepen.io/kevkidev/full/rNzbaoL",
+    route: process.env.REACT_APP_URL_CODEPEN_TRIBUTE,
     title: "Responsive Tribute",
     imageSrc: "1V-fA6ML6GkuHDSuEf31uv-vPhWx4n1wq",
     external: true,
@@ -97,7 +94,10 @@ function ProjectList({ limit }) {
 
   const TileContent = ({ e }) => (
     <Fragment>
-      <img src={SERVER_PREFIX + e.imageSrc} alt={e.title + " image"} />
+      <img
+        src={process.env.REACT_APP_SERVER_PREFIX + e.imageSrc}
+        alt={e.title + " image"}
+      />
       <p className="title">{e.title}</p>
       <p className="description">{e.description}</p>
     </Fragment>

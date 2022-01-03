@@ -260,9 +260,7 @@ export default class Calculator extends Component {
       <div className="calc-container">
         <CommonReturnLinks />
         <CommonExternalLinks
-          urls={[
-            "https://github.com/kevkidev/front-react-portfolio/tree/develop/src/calculator",
-          ]}
+          urls={[process.env.REACT_APP_URL_GITHUB_CALCULATOR]}
         />
         <div id="calc" onKeyPress={this.handleKeyUp} tabIndex={0}>
           <div className="screen" style={{ gridArea: "display" }}>

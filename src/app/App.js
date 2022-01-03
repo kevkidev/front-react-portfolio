@@ -48,6 +48,21 @@ class App extends Component {
               <div>
                 <h1 className="app-h1 title">ReactFrontendDeveloper</h1>
                 <p className="sub-title">by Kevin M. aka KevKiDev</p>
+                <p className="presentation">
+                  This website has built using the <em>React</em> library and
+                  some of the associated ecosystem. See the{" "}
+                  <a
+                    href={process.env.REACT_APP_URL_GITHUB_APP}
+                    target="__blank"
+                  >
+                    full source code here
+                  </a>
+                  . I used both <em>Redux</em> and <em>Context</em> tools,{" "}
+                  <em>react-router-dom v4+</em> for the main navigation bar and
+                  routing and <em>SASS</em> for the design. See small projects's
+                  short description to know which technology I have used for
+                  each one.
+                </p>
               </div>
             </section>
 
@@ -67,10 +82,10 @@ class App extends Component {
               <div>
                 <h1 className="app-h1">Let's collaborate together</h1>
                 <h2 className="app-h2">See more and contact me on</h2>
-                <a href="https://gist.github.com/kevkidev">
+                <a href={process.env.REACT_APP_URL_GITHUB_PROFILE}>
                   <i className="bi bi-github" />
                 </a>
-                <a href="https://www.linkedin.com/in/kevkidev/">
+                <a href={process.env.REACT_APP_URL_LINKED_IN_PROFILE}>
                   <i className="bi bi-linkedin" />
                 </a>
               </div>
@@ -78,10 +93,7 @@ class App extends Component {
           </main>
           <footer id="app-footer" className="app-footer">
             <span>&copy;2022 powered by Kevkidev</span>
-            <a
-              href="https://github.com/kevkidev/front-react-portfolio"
-              className="app-a"
-            >
+            <a href={process.env.REACT_APP_URL_GITHUB_APP} className="app-a">
               See full source code on <i className="bi bi-github" />
             </a>
           </footer>

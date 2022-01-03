@@ -139,14 +139,15 @@ export default class Chrono extends Component {
         <div className="chrono-container">
           <CommonReturnLinks />
           <CommonExternalLinks
-            urls={[
-              "https://github.com/kevkidev/front-react-portfolio/tree/develop/src/drum-machine",
-            ]}
+            urls={[process.env.REACT_APP_URL_GITHUB_CHRONO]}
           />
           <div id="chrono">
             <audio
               id={AUDIO_END}
-              src="https://docs.google.com/uc?export=download&id=11eGZHLeYjikqghM8v2fPkZkQYMzaFM08"
+              src={
+                process.env.REACT_APP_SERVER_PREFIX +
+                "11eGZHLeYjikqghM8v2fPkZkQYMzaFM08"
+              }
             />
             <h1>Interval Clock</h1>
             <div className="display">

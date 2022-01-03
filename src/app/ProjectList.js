@@ -1,7 +1,7 @@
 import "./ProjectList.scss";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { PATH_MARKDOWN_EDITOR } from "./common/routes";
+import { PATH_MARKDOWN_EDITOR } from "../common/routes";
 
 const SERVER_PREFIX = "https://docs.google.com/uc?export=download&id=";
 //img template https://cdn-icons-png.flaticon.com/512/2972/2972316.png

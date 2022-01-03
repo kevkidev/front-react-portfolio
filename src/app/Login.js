@@ -1,7 +1,7 @@
 import firebase from "firebase/app";
 import { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { signInWithGoogle } from "./services/firebase";
+import { signInWithGoogle } from "../services/firebase";
 
 export default function Login(props) {
   // let params = useParams();

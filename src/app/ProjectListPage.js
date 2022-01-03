@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { lazy } from "react/cjs/react.development";
 import { Fragment } from "react/cjs/react.production.min";
-import CommonReturnLinks from "./common/CommonReturnLinks";
+import CommonReturnLinks from "../common/CommonReturnLinks";
 const ProjectList = lazy(() => import("./ProjectList"));
 const style = {
   textAlign: "center",

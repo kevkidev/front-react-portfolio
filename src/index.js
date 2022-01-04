@@ -19,9 +19,10 @@ const DrumMachine = lazy(() => import("./drum-machine/DrumMachine"));
 const GameBlocks = lazy(() => import("./game-blocks/GameBlocks"));
 const MarkdownEditor = lazy(() => import("./markdown-editor/MarkdownEditor"));
 
+console.log(routes.PATH_BASENAME);
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={routes.PATH_BASENAME}>
       <Suspense fallback={<div>Loading ...</div>}>
         <Routes>
           <Route exact path={routes.PATH_ROOT} element={<App />} />

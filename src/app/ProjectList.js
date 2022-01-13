@@ -1,7 +1,7 @@
 import "./ProjectList.scss";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
-import { PATH_MARKDOWN_EDITOR } from "../common/routes";
+import { PATH_MARKDOWN_EDITOR, PATH_PROJECTS_D3 } from "../common/routes";
 
 const projects = [
   {
@@ -31,6 +31,13 @@ const projects = [
     title: "React Markdown Editor",
     imageSrc: "1cXgz4rGSPyS3nUixfO_gh5h6d5UxQivS",
     external: false,
+    display: true,
+    description: "...",
+  },
+  {
+    route: PATH_PROJECTS_D3,
+    title: "D3 Data Driven Documents Examples",
+    imageSrc: "1e2xAiQ8sKCTXESOSljFzlkuzXCNNSO3I",
     display: true,
     description: "...",
   },

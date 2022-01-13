@@ -6,6 +6,7 @@ import "./index.scss";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import * as routes from "./common/routes";
+import D3Examples from "./d3-examples/D3Examples";
 
 // Lazy imports
 const App = lazy(() => import("./app/App"));
@@ -48,6 +49,7 @@ ReactDOM.render(
             path={routes.PATH_MARKDOWN_EDITOR}
             element={<MarkdownEditor />}
           />
+          <Route path={routes.PATH_PROJECTS_D3} element={<D3Examples />} />
           <Route path="/login/:login" element={<Login />} />
           <Route path="/*/*" element={<NotFoundPage />} />
         </Routes>

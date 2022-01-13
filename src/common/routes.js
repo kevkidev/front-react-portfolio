@@ -7,3 +7,4 @@ export const PATH_PROJECTS_CALCULATOR = PATH_PROJECTS + "/calculator";
 export const PATH_PROJECTS_DRUM_MACHINE = PATH_PROJECTS + "/drum-machine";
 export const PATH_PROJECTS_CHAT = PATH_PROJECTS + "/chat";
 export const PATH_PROJECTS_GAME_BLOCKS = PATH_PROJECTS + "/game-blocks";
+export const PATH_PROJECTS_D3 = PATH_PROJECTS + "/d3-examples";

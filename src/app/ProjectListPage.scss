@@ -1,5 +1,10 @@
 @import "../common/common";
 
-div {
-  background-color: $app-color-black;
+.div-project-list-page {
+  text-align: center;
+
+  h1 {
+    color: $app-color-white;
+    margin-top: 40px;
+  }
 }

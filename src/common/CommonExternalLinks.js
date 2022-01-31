@@ -6,7 +6,7 @@ export default function CommonExternalLinks({ urls }) {
     <div className="common-external-links">
       <a className="common-external-link" href={urls[0]} target="__blank">
         <i className="bi bi-arrow-return-right " />
-        &nbsp;&nbsp;See source code on GitHub
+        &nbsp;&nbsp;See source code <i className="bi bi-github" />
       </a>
     </div>
   );

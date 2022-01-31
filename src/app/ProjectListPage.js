@@ -3,9 +3,6 @@ import { Fragment, lazy, Suspense } from "react";
 import CommonReturnLinks from "../common/CommonReturnLinks";
 
 const ProjectList = lazy(() => import("./ProjectList"));
-const style = {
-  textAlign: "center",
-};
 
 export default function ProjectListPage() {
   return (

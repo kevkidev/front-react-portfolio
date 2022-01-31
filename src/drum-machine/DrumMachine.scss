@@ -1,7 +1,7 @@
 .drum-machine-container {
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(58, 37, 58);
@@ -10,11 +10,12 @@
     margin: auto;
     width: fit-content;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    align-items: center;
+    gap: 50px;
     background-color: rgb(126, 82, 126);
-    padding: 40px;
+    padding: 10px;
     box-shadow: 0 0 100px rgb(129, 36, 129);
   }
   #drum-machine:focus {

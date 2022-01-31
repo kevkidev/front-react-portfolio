@@ -72,6 +72,9 @@ export default class DrumMachine extends Component {
         <CommonExternalLinks urls={[process.env.REACT_APP_URL_GITHUB_DRUM]} />
         <div className="parent" onKeyPress={this.keyAction}>
           <div id="drum-machine" tabIndex={0}>
+            <div className="controls">
+              <div id="display">{this.state.soundName}</div>
+            </div>
             <div className="pads">
               {Object.keys(KEYS).map((e) => (
                 <Key
@@ -81,9 +84,6 @@ export default class DrumMachine extends Component {
                   clickAction={this.clickAction}
                 />
               ))}
-            </div>
-            <div className="controls">
-              <div id="display">{this.state.soundName}</div>
             </div>
           </div>
         </div>

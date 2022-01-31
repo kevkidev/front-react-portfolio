@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import { Fragment } from "react/cjs/react.production.min";
 import "./App.scss";
-import { Component, lazy, Suspense } from "react";
+import { Component, lazy, Suspense, Fragment } from "react";
 
 const ProjectList = lazy(() => import("./ProjectList"));
 
@@ -71,7 +70,9 @@ class App extends Component {
               <Suspense fallback={<div>Loading projects...</div>}>
                 <ProjectList limit={6} />
               </Suspense>
-              <Link to="/projects">More projects</Link>
+              <Link to="/projects">
+                <i className="bi bi-arrow-right"></i> More projects
+              </Link>
               &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
               <a href="#app-contact-section">
                 More about me <i className="bi bi-arrow-down"></i>
@@ -82,10 +83,16 @@ class App extends Component {
               <div>
                 <h1 className="app-h1">Let's collaborate together</h1>
                 <h2 className="app-h2">See more and contact me on</h2>
-                <a href={process.env.REACT_APP_URL_GITHUB_PROFILE}>
+                <a
+                  href={process.env.REACT_APP_URL_GITHUB_PROFILE}
+                  target="_blank"
+                >
                   <i className="bi bi-github" />
                 </a>
-                <a href={process.env.REACT_APP_URL_LINKED_IN_PROFILE}>
+                <a
+                  href={process.env.REACT_APP_URL_LINKED_IN_PROFILE}
+                  target="_blank"
+                >
                   <i className="bi bi-linkedin" />
                 </a>
               </div>

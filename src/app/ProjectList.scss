@@ -25,6 +25,7 @@
       padding: 10px;
       width: inherit;
       margin: 0;
+      white-space: pre-line;
     }
 
     .project-item {
@@ -35,10 +36,10 @@
       }
       .description {
         height: 150px;
-        font-size: 1em;
+        font-size: 1.2em;
         color: $app-color-white;
         background-color: $app-color-purple;
-        text-align: justify;
+        text-align: left;
       }
     }
 

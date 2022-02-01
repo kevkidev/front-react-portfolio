@@ -6,14 +6,18 @@ const ProjectList = lazy(() => import("./ProjectList"));
 
 const skills = [
   "React v16+",
-  "React-Rooter-Dom",
+  "React Router",
   "React hooks",
   "Context API",
   "Redux",
   "ESnext",
   "JavaScript",
   "TypeScript",
+  "Regular Expressions",
+  "Algorithm scripting",
   "Functional Programming",
+  "API AJAX",
+  "Fetch API",
   "Jest",
   "HTML 5",
   "CSS 3",
@@ -27,6 +31,7 @@ const skills = [
   "Npm",
   "Webpack",
   "SEO",
+  "Accessibility",
   "Git",
   "GitHub",
   "GitLab",
@@ -57,17 +62,9 @@ class App extends Component {
               <p className="sub-title">by Kevin M. aka KevKiDev</p>
               <p className="presentation">
                 This website has built using the <em>React</em> library and some
-                of the associated ecosystem. See the{" "}
-                <a href={process.env.REACT_APP_URL_GITHUB_APP} target="__blank">
-                  full source code here
-                </a>
-                . I used both <em>Redux</em> and <em>Context</em> tools,{" "}
-                <em>react-router-dom v4+</em> for the main navigation bar and
-                routing and <em>SASS</em> for the design. See small projects's
-                short description to know which technology I have used for each
-                one.
+                of the associated ecosystem. See the <a href={process.env.REACT_APP_URL_GITHUB_APP} target="__blank"> full source code here</a>. I used both <em>Redux</em> and <em>Context</em> tools, <em>react-router-dom v4+</em> for the main navigation bar and routing and <em>SASS</em> for the design. See small projects's short description to know which technology I have used for each one.
               </p>
-              <h2>I use these skills into the projects bellow</h2>
+              <h2>I use some of these skills into the projects bellow</h2>
               <div className="keywords">
                 {skills.map((e, i) => (
                   <span className="badge" key={i}>
@@ -98,7 +95,9 @@ class App extends Component {
             <section id="app-contact-section" className="app-section">
               <div>
                 <h1 className="app-h1">Let's collaborate together</h1>
-                <h2 className="app-h2">See more and contact me on</h2>
+                <h2 className="app-h2">
+                  See my curriculum vitae and contact me on
+                </h2>
                 <a
                   href={process.env.REACT_APP_URL_GITHUB_PROFILE}
                   target="_blank"

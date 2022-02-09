@@ -1,10 +1,10 @@
-import "./DrumMachine.scss";
 import { Component } from "react";
-import CommonReturnLinks from "../common/CommonReturnLinks";
 import CommonExternalLinks from "../common/CommonExternalLinks";
+import CommonReturnLinks from "../common/CommonReturnLinks";
+import "./DrumMachine.scss";
 
 const Key = ({ name, audioId, clickAction }) => {
-  const AUDIO_SRC = process.env.REACT_APP_SERVER_PREFIX.concat(audioId);
+  const soundUrl = process.env.PUBLIC_URL + "/sound/".concat(audioId);
   return (
     <button
       id={"btn-" + name}
@@ -12,21 +12,21 @@ const Key = ({ name, audioId, clickAction }) => {
       onClick={() => clickAction(name)}
     >
       {name}
-      <audio id={name} src={AUDIO_SRC} className="clip" />
+      <audio id={name} src={soundUrl} className="clip" />
     </button>
   );
 };
 
 const KEYS = {
-  Q: { name: "Toy Souljah Snare", id: "1KamtQoVQ0wGEqcxoRKSYcJQmeRosGsbB" },
-  W: { name: "Tambourine", id: "1-DFhbWWfkNqMGrPrUg3MXSJe3hGBqAuj" },
-  E: { name: "Shady Crash", id: "1ccD-WRF6qUCq1kJsOwRDpCEaZ21QjoBj" },
-  A: { name: "50 dre Kick", id: "1z1rdfPOxBoxXa3InOTqYoA7DFmsbX1_b" },
-  S: { name: "CKS Urban Clap", id: "1FLszu7toLd5cX-KCHa95GvHEksogtSYo" },
-  D: { name: "CKS Teddy P SD", id: "1ppnangWS0DhaIaR2jjQ0w2G_iR9cy21f" },
-  Z: { name: "CKS Swizz SD", id: "18YqbN_z40dmxSPgD6m0wDbqUJfIn-8pS" },
-  X: { name: "CKS Dre 4 SD", id: "1odVKngqZH79hY-8t-US0dX7oeOJ1WHe0" },
-  C: { name: "CKS Dre 2 SD", id: "1qOWrj5Z8E8RjPK76uyYOTBZa4ShQ2Xug" },
+  Q: { name: "2Pac Snare3", id: "2Pac Snare3.wav" },
+  W: { name: "50 dre kick", id: "50 dre kick.wav" },
+  E: { name: "50 dre snare", id: "50 dre snare.wav" },
+  A: { name: "50 Synth", id: "50 Synth.wav" },
+  S: { name: "808kick8", id: "808kick8.wav" },
+  D: { name: "808LONG_", id: "808LONG_.WAV" },
+  Z: { name: "BARYHAT1", id: "BARYHAT1.WAV" },
+  X: { name: "01 HHclosed08", id: "01 HHclosed08.wav" },
+  C: { name: "CKS Dre 1 SD", id: "CKS Dre 1 SD.wav" },
 };
 
 export default class DrumMachine extends Component {

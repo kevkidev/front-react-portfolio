@@ -1,7 +1,7 @@
-import "./style.scss";
 import { Component, Fragment } from "react";
-import CommonReturnLinks from "../common/CommonReturnLinks";
 import CommonExternalLinks from "../common/CommonExternalLinks";
+import CommonReturnLinks from "../common/CommonReturnLinks";
+import "./style.scss";
 
 const BREAK_ID = "break";
 const SESSION_ID = "session";
@@ -144,10 +144,7 @@ export default class Chrono extends Component {
           <div id="chrono">
             <audio
               id={AUDIO_END}
-              src={
-                process.env.REACT_APP_SERVER_PREFIX +
-                "11eGZHLeYjikqghM8v2fPkZkQYMzaFM08"
-              }
+              src={process.env.PUBLIC_URL + "/sound/Door-Bell-Ding-A1.mp3"}
             />
             <h1>Interval Clock</h1>
             <div className="display">
@@ -212,7 +209,7 @@ export default class Chrono extends Component {
 
             <div className="commands">
               <div id="start_stop" onClick={this.startStopTimer.bind(this)}>
-                <i className="bi bi-play-circle-fill " />
+                <i className="bi bi-play-circle-fill" />
                 <i className="bi bi-pause-circle-fill" />
               </div>
               <i

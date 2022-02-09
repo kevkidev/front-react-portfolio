@@ -1,6 +1,6 @@
-import "./ProjectListPage.scss";
 import { Fragment, lazy, Suspense } from "react";
 import CommonReturnLinks from "../common/CommonReturnLinks";
+import "./ProjectListPage.scss";
 
 const ProjectList = lazy(() => import("./ProjectList"));
 

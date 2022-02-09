@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/front-react-portfolio/static/css/main.e30b97e1.css",
-    "main.js": "/front-react-portfolio/static/js/main.0c13411c.js",
+    "main.js": "/front-react-portfolio/static/js/main.1305b1c9.js",
     "static/css/935.f98498b9.chunk.css": "/front-react-portfolio/static/css/935.f98498b9.chunk.css",
     "static/js/935.c2583947.chunk.js": "/front-react-portfolio/static/js/935.c2583947.chunk.js",
     "static/css/150.439e6833.chunk.css": "/front-react-portfolio/static/css/150.439e6833.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/105.7ecb3c96.chunk.js": "/front-react-portfolio/static/js/105.7ecb3c96.chunk.js",
     "static/css/374.9ed9be2b.chunk.css": "/front-react-portfolio/static/css/374.9ed9be2b.chunk.css",
     "static/js/374.620f8d84.chunk.js": "/front-react-portfolio/static/js/374.620f8d84.chunk.js",
-    "static/css/344.4bf01b27.chunk.css": "/front-react-portfolio/static/css/344.4bf01b27.chunk.css",
+    "static/css/344.e27f765a.chunk.css": "/front-react-portfolio/static/css/344.e27f765a.chunk.css",
     "static/js/344.04551457.chunk.js": "/front-react-portfolio/static/js/344.04551457.chunk.js",
     "static/css/871.d10fb0f2.chunk.css": "/front-react-portfolio/static/css/871.d10fb0f2.chunk.css",
     "static/js/871.9a7f0573.chunk.js": "/front-react-portfolio/static/js/871.9a7f0573.chunk.js",
@@ -22,12 +22,12 @@
     "static/js/693.c7915832.chunk.js": "/front-react-portfolio/static/js/693.c7915832.chunk.js",
     "static/js/787.eb06b48c.chunk.js": "/front-react-portfolio/static/js/787.eb06b48c.chunk.js",
     "static/css/409.0bb498e4.chunk.css": "/front-react-portfolio/static/css/409.0bb498e4.chunk.css",
-    "static/js/409.871eb17e.chunk.js": "/front-react-portfolio/static/js/409.871eb17e.chunk.js",
+    "static/js/409.86bbdd87.chunk.js": "/front-react-portfolio/static/js/409.86bbdd87.chunk.js",
     "static/js/819.d372042f.chunk.js": "/front-react-portfolio/static/js/819.d372042f.chunk.js",
     "static/js/58.626d42ea.chunk.js": "/front-react-portfolio/static/js/58.626d42ea.chunk.js",
     "index.html": "/front-react-portfolio/index.html",
     "main.e30b97e1.css.map": "/front-react-portfolio/static/css/main.e30b97e1.css.map",
-    "main.0c13411c.js.map": "/front-react-portfolio/static/js/main.0c13411c.js.map",
+    "main.1305b1c9.js.map": "/front-react-portfolio/static/js/main.1305b1c9.js.map",
     "935.f98498b9.chunk.css.map": "/front-react-portfolio/static/css/935.f98498b9.chunk.css.map",
     "935.c2583947.chunk.js.map": "/front-react-portfolio/static/js/935.c2583947.chunk.js.map",
     "150.439e6833.chunk.css.map": "/front-react-portfolio/static/css/150.439e6833.chunk.css.map",
@@ -38,7 +38,7 @@
     "105.7ecb3c96.chunk.js.map": "/front-react-portfolio/static/js/105.7ecb3c96.chunk.js.map",
     "374.9ed9be2b.chunk.css.map": "/front-react-portfolio/static/css/374.9ed9be2b.chunk.css.map",
     "374.620f8d84.chunk.js.map": "/front-react-portfolio/static/js/374.620f8d84.chunk.js.map",
-    "344.4bf01b27.chunk.css.map": "/front-react-portfolio/static/css/344.4bf01b27.chunk.css.map",
+    "344.e27f765a.chunk.css.map": "/front-react-portfolio/static/css/344.e27f765a.chunk.css.map",
     "344.04551457.chunk.js.map": "/front-react-portfolio/static/js/344.04551457.chunk.js.map",
     "871.d10fb0f2.chunk.css.map": "/front-react-portfolio/static/css/871.d10fb0f2.chunk.css.map",
     "871.9a7f0573.chunk.js.map": "/front-react-portfolio/static/js/871.9a7f0573.chunk.js.map",
@@ -48,12 +48,12 @@
     "693.c7915832.chunk.js.map": "/front-react-portfolio/static/js/693.c7915832.chunk.js.map",
     "787.eb06b48c.chunk.js.map": "/front-react-portfolio/static/js/787.eb06b48c.chunk.js.map",
     "409.0bb498e4.chunk.css.map": "/front-react-portfolio/static/css/409.0bb498e4.chunk.css.map",
-    "409.871eb17e.chunk.js.map": "/front-react-portfolio/static/js/409.871eb17e.chunk.js.map",
+    "409.86bbdd87.chunk.js.map": "/front-react-portfolio/static/js/409.86bbdd87.chunk.js.map",
     "819.d372042f.chunk.js.map": "/front-react-portfolio/static/js/819.d372042f.chunk.js.map",
     "58.626d42ea.chunk.js.map": "/front-react-portfolio/static/js/58.626d42ea.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e30b97e1.css",
-    "static/js/main.0c13411c.js"
+    "static/js/main.1305b1c9.js"
   ]
 }

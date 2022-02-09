@@ -1,14 +1,19 @@
 .calc-container {
   padding-top: 110px;
-  padding-bottom: 10px;
-  background-color: rgb(130, 137, 238);
-  width: 100vw;
+  background-color: rgb(64, 67, 114);
+  min-width: 100vh;
+  height: 1000vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   #calc {
-    margin: auto;
     width: 300px;
+    height: 500px;
+    @media (max-width: 700px) {
+      width: 80%;
+    }
+    @media (max-width: 400px) {
+      width: 99%;
+    }
     background-color: rgb(0, 0, 0);
     border-color: black;
     border-style: solid;
@@ -72,15 +77,6 @@
     #subtract,
     #equals {
       background-color: rgb(228, 205, 4);
-    }
-  }
-
-  @media (max-width: 500px) {
-    #calc {
-      font-size: 2.5em;
-      width: 95vw;
-      height: 95vh;
-      margin: 0;
     }
   }
 }

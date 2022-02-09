@@ -76,11 +76,14 @@
   }
 
   i {
-    font-size: 35px;
+    font-size: 37px;
     margin: 10px;
     border-radius: 50%;
     border: 2px solid white;
     background-color: whitesmoke;
+  }
+  i::before {
+    display: block;
   }
 
   .settings {

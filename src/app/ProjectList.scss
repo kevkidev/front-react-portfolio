@@ -62,11 +62,19 @@
         font-weight: bold;
       }
       .description {
-        height: 150px;
+        height: 80px;
         font-size: 1em;
         color: $app-color-white;
         background-color: $app-color-black;
         text-align: left;
+      }
+
+      .keywords {
+        .badge {
+          margin: 0 1px;
+          background-color: $app-color-black;
+          box-shadow: 0 0 10px $app-color-green;
+        }
       }
     }
 

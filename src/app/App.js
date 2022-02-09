@@ -1,8 +1,12 @@
+import { Component, Fragment, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import "./App.scss";
-import { Component, lazy, Suspense, Fragment } from "react";
 
 const ProjectList = lazy(() => import("./ProjectList"));
+
+function test() {
+  return;
+}
 
 const skills = [
   "React v16+",
@@ -18,6 +22,8 @@ const skills = [
   "Functional Programming",
   "API AJAX",
   "Fetch API",
+  "Google Firebase Authentification",
+  "Google Firebase Realtime Database",
   "Jest",
   "HTML 5",
   "CSS 3",
@@ -62,7 +68,16 @@ class App extends Component {
               <p className="sub-title">by Kevin M. aka KevKiDev</p>
               <p className="presentation">
                 This website has built using the <em>React</em> library and some
-                of the associated ecosystem. See the <a href={process.env.REACT_APP_URL_GITHUB_APP} target="__blank"> full source code here</a>. I used both <em>Redux</em> and <em>Context</em> tools, <em>react-router-dom v4+</em> for the main navigation bar and routing and <em>SASS</em> for the design. See small projects's short description to know which technology I have used for each one.
+                of the associated ecosystem. See the{" "}
+                <a href={process.env.REACT_APP_URL_GITHUB_APP} target="__blank">
+                  {" "}
+                  full source code here
+                </a>
+                . I used both <em>Redux</em> and <em>Context</em> tools,{" "}
+                <em>react-router-dom v4+</em> for the main navigation bar and
+                routing and <em>SASS</em> for the design. See small projects's
+                short description to know which technology I have used for each
+                one.
               </p>
               <h2>I use some of these skills into the projects bellow</h2>
               <div className="keywords">
@@ -101,12 +116,14 @@ class App extends Component {
                 <a
                   href={process.env.REACT_APP_URL_GITHUB_PROFILE}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <i className="bi bi-github" />
                 </a>
                 <a
                   href={process.env.REACT_APP_URL_LINKED_IN_PROFILE}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <i className="bi bi-linkedin" />
                 </a>

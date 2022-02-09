@@ -5,7 +5,7 @@ import "./ProjectList.scss";
 
 const projects = [
   {
-    route: "/projects",
+    route: "https://kevkidev.github.io/front-react-social-network/",
     title: "React Social Network",
     imageSrc: "coming-soon.jpg",
     display: true,

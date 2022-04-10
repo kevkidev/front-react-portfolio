@@ -15,13 +15,17 @@ function test() {
 
 const skills = [
   "React v16+",
-  "React Router",
+  "React Router v5/6",
   "React hooks",
+  "React Hook From",
+  "Yup (form validation)",
   "Context API",
   "Redux",
   "ESnext",
   "JavaScript",
   "TypeScript",
+  "ES Lint",
+  "Prettier",
   "Regular Expressions",
   "Algorithm scripting",
   "Functional Programming",
@@ -48,6 +52,8 @@ const skills = [
   "GitLab",
   "VS Code",
   "Color Theory",
+  "Heroku",
+  "SOLID",
 ];
 
 class App extends Component {

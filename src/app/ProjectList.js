@@ -11,11 +11,12 @@ const projects = [
     imageSrc: "coming-soon.jpg",
     display: true,
     external: true,
-    description: "(IN PROGRESS) Fake demo e-commerce",
+    description:
+      "(IN PROGRESS) Fake demo e-commerce. Now you can sign up/in, create and modify Sell/Catalogs and Sell/Products...",
     keywords: [
       "React",
       "React Hooks",
-      "React Rooter",
+      "React Rooter v6",
       "React Hook Form",
       "Yup form validation",
       "TypeScript",

@@ -1,5 +1,5 @@
 export const PATH_ROOT = "/";
-export const PATH_BASENAME = PATH_ROOT + process.env.REACT_APP_NAME;
+export const PATH_BASENAME = PATH_ROOT + process.env.PUBLIC_URL;
 export const PATH_PROJECTS = PATH_ROOT + "projects";
 export const PATH_MARKDOWN_EDITOR = PATH_PROJECTS + "/markdown-editor";
 export const PATH_PROJECTS_TIME_INTERVAL = PATH_PROJECTS + "/time-interval";

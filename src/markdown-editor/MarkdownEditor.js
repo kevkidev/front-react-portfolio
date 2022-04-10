@@ -1,9 +1,10 @@
-import "./MarkdownEditor.scss";
+import DOMPurify from "dompurify";
+import CommonExternalLinks from "../common/CommonExternalLinks";
+import CommonReturnLinks from "../common/CommonReturnLinks";
+import { REACT_APP_URL_GITHUB_MARKDOWN } from "../common/urls";
 import BoxContentEditor from "./BoxContentEditor";
 import BoxHeader from "./BoxHeader";
-import CommonReturnLinks from "../common/CommonReturnLinks";
-import CommonExternalLinks from "../common/CommonExternalLinks";
-import DOMPurify from "dompurify";
+import "./MarkdownEditor.scss";
 
 const { Component, Fragment } = require("react");
 const EDIT = "Editor";
@@ -45,9 +46,7 @@ export default class MarkdownEditor extends Component {
     return (
       <Fragment>
         <CommonReturnLinks />
-        <CommonExternalLinks
-          urls={[process.env.REACT_APP_URL_GITHUB_MARKDOWN]}
-        />
+        <CommonExternalLinks urls={[REACT_APP_URL_GITHUB_MARKDOWN]} />
         <div className="md-editor-container">
           <section id="section-editor" className={editClass}>
             <BoxHeader title={EDIT} toggle={this.toggleBox.bind(this)} />

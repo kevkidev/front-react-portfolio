@@ -1,30 +1,40 @@
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { PATH_MARKDOWN_EDITOR } from "../common/routes";
+import { URL_RECOM } from "../common/urls";
 import "./ProjectList.scss";
 
 const projects = [
   {
-    route: "https://kevkidev.github.io/front-react-social-network/",
-    title: "React Social Network",
+    route: URL_RECOM,
+    title: "React e-commerce",
     imageSrc: "coming-soon.jpg",
     display: true,
-    description: "(IN PROGRESS)",
+    external: true,
+    description: "(IN PROGRESS) Fake demo e-commerce",
     keywords: [
       "React",
-      "Hooks",
+      "React Hooks",
       "React Rooter",
+      "React Hook Form",
+      "Yup form validation",
       "TypeScript",
       "Eslint",
       "Fetch API",
       "express.js",
       "JWT Token",
       "Google Firebase",
+      "Firebase Auth",
+      "Firebase Realtime DB",
       "Boostrap",
       "Sass",
       "Git",
       "GitHub",
       "Heroku",
+      "Prettier",
+      "lodash",
+      "Jest",
+      "SOLID",
     ],
   },
   {
@@ -87,7 +97,7 @@ const projects = [
     keywords: ["audio", "JSX", "CSS Grid", "SASS"],
   },
   {
-    route: process.env.REACT_APP_URL_CODEPEN_QUOTE_MACHINE,
+    route: "https://codepen.io/kevkidev/full/BawKJOV",
     title: "React Random Quote Machine",
     imageSrc: "fcc-random-quote-react.PNG",
     external: true,
@@ -96,7 +106,7 @@ const projects = [
     keywords: ["React", "CSS", "SASS", "JSX"],
   },
   {
-    route: process.env.REACT_APP_URL_CODEPEN_SURVEY_FORM,
+    route: "https://codepen.io/kevkidev/full/dyzLYOb",
     title: "Responsive Survey Form",
     imageSrc: "fcc-survey-form-html-css.PNG",
     external: true,
@@ -105,7 +115,7 @@ const projects = [
     keywords: ["HTML", "form", "input", "CSS", "media query"],
   },
   {
-    route: process.env.REACT_APP_URL_CODEPEN_DOC,
+    route: "https://codepen.io/kevkidev/full/WNEWMmx",
     title: "Responsive Technical doc template",
     imageSrc: "fcc-technical-doc-template.PNG",
     external: true,
@@ -114,7 +124,7 @@ const projects = [
     keywords: ["HMTL", "CSS", "media query"],
   },
   {
-    route: process.env.REACT_APP_URL_CODEPEN_LANDING,
+    route: "https://codepen.io/kevkidev/full/PoKgOQb",
     title: "Responsive Product Landing Page",
     imageSrc: "fcc-product-landing-page-html-css.PNG",
     external: true,
@@ -124,7 +134,7 @@ const projects = [
     keywords: [],
   },
   {
-    route: process.env.REACT_APP_URL_CODEPEN_TRIBUTE,
+    route: "https://codepen.io/kevkidev/full/rNzbaoL",
     title: "Responsive Tribute",
     imageSrc: "fcc-tribute-html-css.PNG",
     external: true,

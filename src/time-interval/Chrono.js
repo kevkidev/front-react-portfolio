@@ -1,6 +1,7 @@
 import { Component, Fragment } from "react";
 import CommonExternalLinks from "../common/CommonExternalLinks";
 import CommonReturnLinks from "../common/CommonReturnLinks";
+import { REACT_APP_URL_GITHUB_CHRONO } from "../common/urls";
 import "./style.scss";
 
 const BREAK_ID = "break";
@@ -138,9 +139,7 @@ export default class Chrono extends Component {
       <Fragment>
         <div className="chrono-container">
           <CommonReturnLinks />
-          <CommonExternalLinks
-            urls={[process.env.REACT_APP_URL_GITHUB_CHRONO]}
-          />
+          <CommonExternalLinks urls={[REACT_APP_URL_GITHUB_CHRONO]} />
           <div id="chrono">
             <audio
               id={AUDIO_END}

@@ -1,5 +1,10 @@
 import { Component, Fragment, lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
+import {
+  REACT_APP_URL_GITHUB_APP,
+  REACT_APP_URL_GITHUB_PROFILE,
+  REACT_APP_URL_LINKED_IN_PROFILE,
+} from "../common/urls";
 import "./App.scss";
 
 const ProjectList = lazy(() => import("./ProjectList"));
@@ -114,14 +119,14 @@ class App extends Component {
                   See my curriculum vitae and contact me on
                 </h2>
                 <a
-                  href={process.env.REACT_APP_URL_GITHUB_PROFILE}
+                  href={REACT_APP_URL_GITHUB_PROFILE}
                   target="_blank"
                   rel="noreferrer"
                 >
                   <i className="bi bi-github" />
                 </a>
                 <a
-                  href={process.env.REACT_APP_URL_LINKED_IN_PROFILE}
+                  href={REACT_APP_URL_LINKED_IN_PROFILE}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -132,7 +137,7 @@ class App extends Component {
           </main>
           <footer id="app-footer" className="app-footer">
             <span>&copy;2022 by Kevkidev</span>
-            <a href={process.env.REACT_APP_URL_GITHUB_APP} className="app-a">
+            <a href={REACT_APP_URL_GITHUB_APP} className="app-a">
               See full source code on <i className="bi bi-github" />
             </a>
           </footer>

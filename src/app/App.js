@@ -80,7 +80,7 @@ class App extends Component {
               <p className="presentation">
                 This website has built using the <em>React</em> library and some
                 of the associated ecosystem. See the{" "}
-                <a href={process.env.REACT_APP_URL_GITHUB_APP} target="__blank">
+                <a href={REACT_APP_URL_GITHUB_APP} target="__blank">
                   {" "}
                   full source code here
                 </a>

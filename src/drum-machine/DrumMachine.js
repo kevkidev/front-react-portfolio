@@ -1,6 +1,7 @@
 import { Component } from "react";
 import CommonExternalLinks from "../common/CommonExternalLinks";
 import CommonReturnLinks from "../common/CommonReturnLinks";
+import { REACT_APP_URL_GITHUB_DRUM } from "../common/urls";
 import "./DrumMachine.scss";
 
 const Key = ({ name, audioId, clickAction }) => {
@@ -69,7 +70,7 @@ export default class DrumMachine extends Component {
         className="container-fluid drum-machine-container"
       >
         <CommonReturnLinks />
-        <CommonExternalLinks urls={[process.env.REACT_APP_URL_GITHUB_DRUM]} />
+        <CommonExternalLinks urls={[REACT_APP_URL_GITHUB_DRUM]} />
         <div className="parent" onKeyPress={this.keyAction}>
           <div id="drum-machine" tabIndex={0}>
             <div className="controls">
